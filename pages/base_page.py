@@ -1,6 +1,7 @@
 from playwright.sync_api import Page, expect
 from utils.endpoints import Endpoints
 
+
 class BasePage(object):
     URL = Endpoints.BASE_URL
 
@@ -40,3 +41,12 @@ class BasePage(object):
         actual_value = element.get_attribute(attribute)
         return actual_value == expected_value
 
+    def handle_alert(self, dialog_info):
+        dialog_info.accept()
+
+    def register_alert_handler(self):
+        # Register the callback to handle the alert
+        self.page.context.on("dialog", self.handle_alert)
+
+    def wait_for_load_state_load(self):
+        self.page.wait_for_load_state("load")
