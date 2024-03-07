@@ -114,7 +114,7 @@ class AlertsWindowsPageLocators:
     modal_dialogs_option = "//span[contains(text(), 'Modal Dialogs')]"
 
 class AlertsPageLocators:
-    alert_button = ""
-    alert_five_sec_button = ""
-    confirm_button = ""
-    prompt_button = ""
+    alert_button = "#alertButton"
+    timer_alert_button = "#timerAlertButton"
+    confirm_button = "#confirmButton"
+    prompt_button = "#promtButton"
