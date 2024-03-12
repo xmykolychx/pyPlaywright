@@ -20,3 +20,4 @@ class Endpoints:
     PROGRESS_BAR_URL: str = f"{BASE_URL}/progress-bar"
 
     ALERTS_WINDOWS_URL: str = f"{BASE_URL}/alertsWindows"
+
