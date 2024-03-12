@@ -4,7 +4,6 @@ from utils.locators import WidgetsPageLocators
 from utils.endpoints import Endpoints
 
 
-
 class WidgetsPage(BasePage):
     URL = Endpoints.WIDGETS_URL
 

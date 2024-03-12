@@ -4,7 +4,6 @@ from utils.locators import SliderPageLocators
 from utils.endpoints import Endpoints
 
 
-
 class SliderPage(BasePage):
     URL = Endpoints.SLIDER_URL
 
