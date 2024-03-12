@@ -36,10 +36,8 @@ class FormPage(BasePage):
         self.page.locator(FormLocators.mobile_input).click()
         self.page.locator(FormLocators.mobile_input).fill(TestData.phone_number)
 
-
     def select_date_of_birth(self):
         self.page.locator(FormLocators.date_of_birth_input).fill('01 Jan 1990')
-
 
     def check_hobby(self):
         hobbies = [
@@ -79,20 +77,6 @@ class FormPage(BasePage):
     def select_city(self):
         self.page.locator(FormLocators.city_dropdown).fill('a')
         self.page.get_by_text("Panipat").click()
-
-    def fill_form(self):
-        self.fill_first_name()
-        self.fill_last_name()
-        self.fill_email()
-        self.select_gender()
-        self.fill_phone_number()
-        self.select_date_of_birth()
-        self.fill_subject()
-        self.check_hobby()
-        self.fill_current_address()
-        self.select_state()
-        self.select_city()
-        self.click_submit_button()
 
     def close_form(self):
         # close button is overlapped by google ad so this is the current way of closing
